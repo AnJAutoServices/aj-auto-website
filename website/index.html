@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A&amp;J Auto Services – Premium Auto Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo-svg">
+        <img src="logo.png" alt="A&J Auto Services" />
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#works">Our Work</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Trusted Auto Service Since 2025
+        </div>
+        <h1 class="hero-title">
+          Get Your Car <br /><span class="highlight">Running Perfect</span><br /> Every Time
+        </h1>
+        <p class="hero-sub">
+          Expert auto repair &amp; maintenance for all makes and models. From oil changes to full engine overhauls — we keep you on the road.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary btn-lg">Book a Service</a>
+          <a href="#works" class="btn btn-ghost-light btn-lg">
+            <span class="play-icon">&#9654;</span> See Our Work
+          </a>
+        </div>
+        <div class="hero-rating">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-text">
+            <strong>4.9</strong>
+            <span>5-star rated service</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="splash splash-1"></div>
+        <div class="splash splash-2"></div>
+        <div class="hero-image-wrap">
+          <svg class="hero-car-svg" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Car body -->
+            <rect x="30" y="160" width="360" height="90" rx="12" fill="#2a2a2a"/>
+            <!-- Car roof / cabin -->
+            <path d="M110 160 C130 100 180 80 220 80 C260 80 300 100 320 160 Z" fill="#1e1e1e"/>
+            <!-- Windshield -->
+            <path d="M140 160 C155 115 185 98 220 98 C255 98 280 115 290 160 Z" fill="#555" opacity="0.6"/>
+            <!-- Windows side -->
+            <rect x="112" y="130" width="50" height="30" rx="4" fill="#555" opacity="0.5"/>
+            <rect x="168" y="120" width="85" height="40" rx="4" fill="#555" opacity="0.5"/>
+            <rect x="259" y="130" width="50" height="30" rx="4" fill="#555" opacity="0.5"/>
+            <!-- Wheels -->
+            <circle cx="115" cy="250" r="38" fill="#111"/>
+            <circle cx="115" cy="250" r="24" fill="#333"/>
+            <circle cx="115" cy="250" r="10" fill="#b01818"/>
+            <circle cx="305" cy="250" r="38" fill="#111"/>
+            <circle cx="305" cy="250" r="24" fill="#333"/>
+            <circle cx="305" cy="250" r="10" fill="#b01818"/>
+            <!-- Headlight -->
+            <ellipse cx="385" cy="195" rx="18" ry="10" fill="#d42020" opacity="0.9"/>
+            <ellipse cx="385" cy="195" rx="12" ry="7" fill="#fff" opacity="0.8"/>
+            <!-- Taillight -->
+            <rect x="30" y="188" width="12" height="22" rx="4" fill="#b01818"/>
+            <!-- Grill -->
+            <rect x="375" y="205" width="20" height="5" rx="2" fill="#aaa"/>
+            <rect x="375" y="213" width="20" height="5" rx="2" fill="#aaa"/>
+            <!-- Door handle -->
+            <rect x="165" y="195" width="25" height="5" rx="2" fill="#b01818"/>
+            <rect x="250" y="195" width="25" height="5" rx="2" fill="#b01818"/>
+            <!-- Ground shadow -->
+            <ellipse cx="210" cy="292" rx="180" ry="8" fill="#00000040"/>
+          </svg>
+        </div>
+        <!-- Floating badges -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUSTED BRANDS ===== -->
+  <section class="brands">
+    <div class="container">
+      <p class="brands-label">Trusted brands we service &amp; stock parts for</p>
+      <div class="brands-logos">
+        <span class="brand-logo">Toyota</span>
+        <span class="brand-logo">Honda</span>
+        <span class="brand-logo">Ford</span>
+        <span class="brand-logo">Chevrolet</span>
+        <span class="brand-logo">BMW</span>
+        <span class="brand-logo">Mercedes-Benz</span>
+        <span class="brand-logo">Audi</span>
+        <span class="brand-logo">Volkswagen</span>
+        <span class="brand-logo">Nissan</span>
+        <span class="brand-logo">Hyundai</span>
+        <span class="brand-logo">Kia</span>
+        <span class="brand-logo">Dodge</span>
+        <span class="brand-logo">Jeep</span>
+        <span class="brand-logo">GMC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2>Our <span class="highlight">Capabilities</span></h2>
+        <p>From routine maintenance to custom performance builds — we handle it all.</p>
+      </div>
+
+      <!-- Main service cards -->
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#9881;</div>
+          <h3>Oil &amp; Fluid Services</h3>
+          <p>Full synthetic, conventional, or high-mileage oil changes. Coolant, brake fluid, differential, and transmission fluid services.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9899;</div>
+          <h3>Brake Repair &amp; Replacement</h3>
+          <p>Brake pads, rotors, calipers, and brake fluid flushes. Complete brake system diagnosis and repair.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128663;</div>
+          <h3>Suspension &amp; Steering Repair</h3>
+          <p>Struts, shocks, control arms, ball joints, tie rods, sway bar links, and wheel hub assemblies.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128268;</div>
+          <h3>Battery &amp; Charging System</h3>
+          <p>Battery replacement, alternator and starter replacement, and full charging system diagnostics.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128167;</div>
+          <h3>Cooling System Repairs</h3>
+          <p>Radiator replacement, thermostat, coolant hoses, expansion tanks, and water pump repairs.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9889;</div>
+          <h3>Spark Plugs &amp; Ignition</h3>
+          <p>Spark plug replacement, ignition coil replacement, and full ignition system diagnosis.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128295;</div>
+          <h3>Belts, Filters &amp; Maintenance</h3>
+          <p>Serpentine belt, engine air filter, cabin air filter, wiper blades, and all routine scheduled maintenance.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128269;</div>
+          <h3>Pre-Purchase Inspections</h3>
+          <p>Thinking about buying a used car? We'll give you a full mechanical inspection so you know exactly what you're getting into.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127381;</div>
+          <h3>Custom &amp; Aftermarket Part Installation</h3>
+          <p>Already bought the part? We'll install it. From aftermarket intakes, coilovers, and sway bars to custom lighting and cosmetic upgrades — if you've got the part, we've got the hands. We work with customer-supplied parts and help source components on request.</p>
+          <a href="#contact" class="card-link">Book Now &rarr;</a>
+        </div>
+      </div>
+
+
+      <!-- Mobile service callout -->
+      <div class="mobile-callout">
+        <div class="mobile-callout-icon">&#128663;</div>
+        <div>
+          <h4>Mobile Maintenance Available</h4>
+          <p>We come to you for select services — oil changes, filters, spark plugs, belts, battery, wiper blades, and more.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Book Mobile Service</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / STATS ===== -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <div class="splash splash-about-1"></div>
+          <div class="splash splash-about-2"></div>
+          <div class="about-graphic">
+            <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg" width="340" height="280">
+              <!-- Workshop background -->
+              <rect width="340" height="280" rx="20" fill="#181818"/>
+              <!-- Lift -->
+              <rect x="50" y="200" width="240" height="10" rx="3" fill="#b01818"/>
+              <rect x="80" y="120" width="8" height="80" fill="#2e2e2e"/>
+              <rect x="252" y="120" width="8" height="80" fill="#2e2e2e"/>
+              <!-- Car on lift -->
+              <rect x="70" y="90" width="200" height="55" rx="8" fill="#2a2a2a"/>
+              <path d="M100 90 C115 55 145 42 170 42 C195 42 220 55 240 90 Z" fill="#222222"/>
+              <rect x="102" y="68" width="40" height="22" rx="3" fill="#555" opacity="0.7"/>
+              <rect x="148" y="60" width="45" height="30" rx="3" fill="#555" opacity="0.7"/>
+              <rect x="199" y="68" width="38" height="22" rx="3" fill="#555" opacity="0.7"/>
+              <circle cx="110" cy="145" r="20" fill="#111"/>
+              <circle cx="110" cy="145" r="12" fill="#333"/>
+              <circle cx="110" cy="145" r="5" fill="#b01818"/>
+              <circle cx="230" cy="145" r="20" fill="#111"/>
+              <circle cx="230" cy="145" r="12" fill="#333"/>
+              <circle cx="230" cy="145" r="5" fill="#b01818"/>
+              <!-- Mechanic -->
+              <circle cx="290" cy="165" r="18" fill="#b01818" opacity="0.9"/>
+              <rect x="278" y="185" width="24" height="40" rx="6" fill="#2e2e2e"/>
+              <!-- Wrench -->
+              <line x1="285" y1="190" x2="270" y2="210" stroke="#b01818" stroke-width="3" stroke-linecap="round"/>
+              <!-- Checkmark overlay -->
+              <circle cx="60" cy="40" r="22" fill="#b01818"/>
+              <polyline points="49,40 57,50 74,28" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Text labels -->
+              <rect x="100" y="235" width="140" height="28" rx="8" fill="#b01818" opacity="0.15"/>
+              <text x="170" y="254" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#d42020" font-weight="600">A&amp;J AUTO SERVICES</text>
+            </svg>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <strong>1+</strong><span>Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <strong>5 Stars</strong><span>Service Rating</span>
+          </div>
+          <div class="stat-card">
+            <strong>2</strong><span>Expert Mechanics</span>
+          </div>
+          <div class="stat-card">
+            <strong>100%</strong><span>Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About A&amp;J Auto Services</span>
+        <h2>Your Trusted Local <span class="highlight">Auto Shop</span></h2>
+        <p>At A&amp;J Auto Services, we combine old-school craftsmanship with modern diagnostic technology. Founded in 2025, we've built our reputation on honest, transparent service and quality work that lasts.</p>
+        <p>Our experienced technicians treat every vehicle like their own. No unnecessary upsells — just straight talk and solid repairs.</p>
+        <ul class="about-list">
+          <li><span class="check">&#10003;</span> Experienced, Skilled Technicians</li>
+          <li><span class="check">&#10003;</span> 3-Month / 3,000-Mile Warranty on All Repairs</li>
+          <li><span class="check">&#10003;</span> Transparent Pricing — No Hidden Fees</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Schedule Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SELECTED WORKS ===== -->
+  <section class="works" id="works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2>Selected <span class="highlight">Works</span></h2>
+        <p>A look at some of our recent repairs and restorations.</p>
+      </div>
+      <div class="works-grid">
+        <div class="work-card work-card-large">
+          <div class="work-thumb work-thumb-1">
+            <div class="work-overlay">
+              <span class="work-cat">Engine Rebuild</span>
+              <h4>2018 BMW M3 — Full Engine Overhaul</h4>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb work-thumb-2">
+            <div class="work-overlay">
+              <span class="work-cat">Restoration</span>
+              <h4>1969 Ford Mustang Restoration</h4>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb work-thumb-3">
+            <div class="work-overlay">
+              <span class="work-cat">Diagnostics</span>
+              <h4>Toyota Camry Electrical Fix</h4>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb work-thumb-4">
+            <div class="work-overlay">
+              <span class="work-cat">Brake Service</span>
+              <h4>Mercedes C300 Full Brake Overhaul</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2>What Our <span class="highlight">Customers Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"A&amp;J Auto Services diagnosed and fixed my check engine light in under 2 hours. Honest pricing and they explained everything clearly. Will never go anywhere else!"</p>
+          <div class="t-author">
+            <div class="t-avatar">MR</div>
+            <div>
+              <strong>Marcus Rivera</strong>
+              <small>Toyota Camry Owner</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-featured">
+          <div class="t-quote">&#8220;</div>
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Brought my BMW in for a noise I couldn't figure out. These guys found it instantly — a worn control arm bushing. Fixed same day. Absolutely amazing service and fair prices."</p>
+          <div class="t-author">
+            <div class="t-avatar">SL</div>
+            <div>
+              <strong>Sarah Liu</strong>
+              <small>BMW 3 Series Owner</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"I've been coming to A&amp;J Auto Services for 6 years. They're the most trustworthy shop in town. The free inspection they do every visit has saved me thousands in potential repairs."</p>
+          <div class="t-author">
+            <div class="t-avatar">DK</div>
+            <div>
+              <strong>David Kim</strong>
+              <small>Ford F-150 Owner</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Book Your <span class="highlight">Service</span> Today</h2>
+        <p>Drop us a message or call us directly. We'll get back to you within 1 business hour.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="c-icon">&#128222;</span>
+            <div>
+              <strong>Call Us</strong>
+              <a href="tel:+15551234567">(555) 123-4567</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="c-icon">&#128205;</span>
+            <div>
+              <strong>Find Us</strong>
+              <span>123 Main Street, Auto District</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="c-icon">&#128337;</span>
+            <div>
+              <strong>Hours</strong>
+              <span>Mon–Sat: 8am – 6pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" placeholder="(555) 000-0000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="john@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="vehicle">Vehicle (Year, Make, Model)</label>
+          <input id="vehicle" type="text" placeholder="e.g. 2019 Honda Accord" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>Engine Repair</option>
+            <option>Oil Change</option>
+            <option>Brake Service</option>
+            <option>Tire Service</option>
+            <option>Auto Diagnostics</option>
+            <option>AC / Heating</option>
+            <option>Electrical</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Details</label>
+          <textarea id="message" rows="4" placeholder="Describe the issue or any details..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <p class="form-note">We typically respond within 1 hour during business hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo-svg">
+          <img src="logo.png" alt="A&J Auto Services" />
+        </a>
+        <p>Premium auto service you can trust. Keeping your car in top shape since 2025.</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="social-link">f</a>
+          <a href="#" aria-label="Instagram" class="social-link">in</a>
+          <a href="#" aria-label="Twitter" class="social-link">tw</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Engine Repair</a>
+          <a href="#services">Oil Change</a>
+          <a href="#services">Brake Service</a>
+          <a href="#services">Tire Service</a>
+          <a href="#services">Diagnostics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#works">Our Work</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <span>(555) 123-4567</span>
+          <span>info@ajauto.com</span>
+          <span>123 Main Street</span>
+          <span>Mon–Sat: 8am–6pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2026 A&amp;J Auto Services. All rights reserved.</span>
+        <span>Designed with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Message Sent! ✓';
+      btn.style.background = '#16a34a';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
