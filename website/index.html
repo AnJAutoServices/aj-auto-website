@@ -513,12 +513,41 @@
     });
 
     // Form submit
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Message Sent! ✓';
-      btn.style.background = '#16a34a';
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
       btn.disabled = true;
+
+      const payload = {
+        name:    form.querySelector('#name').value,
+        phone:   form.querySelector('#phone').value,
+        email:   form.querySelector('#email').value,
+        vehicle: form.querySelector('#vehicle').value,
+        service: form.querySelector('#service').value,
+        message: form.querySelector('#message').value
+      };
+
+      try {
+        const res = await fetch('https://anj-auto-contact.azurewebsites.net/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          btn.textContent = 'Message Sent!';
+          btn.style.background = '#16a34a';
+          form.reset();
+        } else {
+          throw new Error(data.error);
+        }
+      } catch (err) {
+        btn.textContent = 'Failed — Try Again';
+        btn.style.background = '#b01818';
+        btn.disabled = false;
+      }
     }
   </script>
 </body>
