@@ -397,42 +397,47 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" id="contactForm">
+
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input id="name" type="text" placeholder="John Smith" required />
+            <input id="name" name="name" type="text" placeholder="John Smith" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input id="phone" type="tel" placeholder="(555) 000-0000" />
+            <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000" />
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input id="email" type="email" placeholder="john@email.com" required />
+          <input id="email" name="email" type="email" placeholder="john@email.com" required />
         </div>
         <div class="form-group">
           <label for="vehicle">Vehicle (Year, Make, Model)</label>
-          <input id="vehicle" type="text" placeholder="e.g. 2019 Honda Accord" />
+          <input id="vehicle" name="vehicle" type="text" placeholder="e.g. 2019 Honda Accord" />
         </div>
         <div class="form-group">
           <label for="service">Service Needed</label>
-          <select id="service">
+          <select id="service" name="service">
             <option value="">Select a service...</option>
             <option>Engine Repair</option>
-            <option>Oil Change</option>
-            <option>Brake Service</option>
-            <option>Tire Service</option>
-            <option>Auto Diagnostics</option>
-            <option>AC / Heating</option>
-            <option>Electrical</option>
+            <option>Oil &amp; Fluid Services</option>
+            <option>Brake Repair &amp; Replacement</option>
+            <option>Suspension &amp; Steering</option>
+            <option>Battery &amp; Charging System</option>
+            <option>Cooling System</option>
+            <option>Spark Plugs &amp; Ignition</option>
+            <option>Belts, Filters &amp; Maintenance</option>
+            <option>Pre-Purchase Inspection</option>
+            <option>Custom &amp; Aftermarket Install</option>
+            <option>Mobile Maintenance</option>
             <option>Other</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">Additional Details</label>
-          <textarea id="message" rows="4" placeholder="Describe the issue or any details..."></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Describe the issue or any details..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-full">Send Message</button>
         <p class="form-note">We typically respond within 1 hour during business hours.</p>
@@ -512,42 +517,42 @@
       document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Form submit
-    async function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
+    // Contact form — submit via Azure Function
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
 
-      const payload = {
-        name:    form.querySelector('#name').value,
-        phone:   form.querySelector('#phone').value,
-        email:   form.querySelector('#email').value,
-        vehicle: form.querySelector('#vehicle').value,
-        service: form.querySelector('#service').value,
-        message: form.querySelector('#message').value
-      };
+        const data = {
+          name: contactForm.querySelector('#name').value,
+          phone: contactForm.querySelector('#phone').value,
+          email: contactForm.querySelector('#email').value,
+          vehicle: contactForm.querySelector('#vehicle').value,
+          service: contactForm.querySelector('#service').value,
+          message: contactForm.querySelector('#message').value
+        };
 
-      try {
-        const res = await fetch('https://anj-auto-contact.azurewebsites.net/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-        if (data.success) {
-          btn.textContent = 'Message Sent!';
-          btn.style.background = '#16a34a';
-          form.reset();
-        } else {
-          throw new Error(data.error);
+        try {
+          const res = await fetch('https://anj-auto-contact.azurewebsites.net/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const json = await res.json();
+          if (json.success) {
+            contactForm.innerHTML = '<div style="text-align:center;padding:40px 20px;"><div style="font-size:48px;margin-bottom:16px;">&#10003;</div><h3 style="color:#fff;font-size:22px;margin-bottom:10px;">Message Sent!</h3><p style="color:rgba(255,255,255,0.6);">We\'ll get back to you within 1 business hour.</p></div>';
+          } else {
+            throw new Error(json.error || 'Unknown error');
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          alert('Sorry, there was an error sending your message. Please call us or try again.');
         }
-      } catch (err) {
-        btn.textContent = 'Failed — Try Again';
-        btn.style.background = '#b01818';
-        btn.disabled = false;
-      }
+      });
     }
   </script>
 </body>
